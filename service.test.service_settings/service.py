@@ -17,7 +17,7 @@ def run():
     monitor = xbmc.Monitor()
     state = False
     while not monitor.abortRequested():
-        print_settings()
+        print_settings('Service - ')
         state = not state
         addon.setSetting('Setting2', str(state).lower())
         monitor.waitForAbort(10)
